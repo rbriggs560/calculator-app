@@ -1,0 +1,251 @@
+:root{
+
+    --numeric-font-size: 32px;
+    --weight: 700;
+    
+    /* Theme ONE*/
+    --body-background: hsl(222, 26%, 31%);
+    --keypad-background: hsl(223, 31%, 20%);
+    --display-background: hsl(224, 36%, 15%);
+    
+    /* KEYS*/
+    --keys-background: hsl(225, 21%, 49%);
+    --keys-shadow: hsl(224, 28%, 35%);
+    --red-key-background-on-toggle: hsl(6, 63%, 50%);
+    --dark-red-key-shadow: hsl(6, 70%, 34%);
+    --light-grayish-orange-key: hsl(30, 25%, 89%);
+    --grayish-orange-key-shadow: hsl(28, 16%, 65%);
+    
+    /* TEXT */
+    --very-dark-grayish-blue: hsl(221, 14%, 31%);
+    --white: hsl(0, 0, 100%);
+    
+    /* Theme TWO
+    
+    --main-background-two: hsl(0, 0%, 90%);
+    /* (toggle background, keypad background) 
+    --rayish-red: hsl(0, 5%, 81%);
+    --screen-background: hsl(0, 0%, 93%);
+    
+    /* Keys 
+    --themetwo-keys-background: hsl(185, 42%, 37%);
+    --themetwo-keys-shadow: hsl(185, 58%, 25%);
+    --themetwo-toggle-key: hsl(25, 98%, 40%);
+    --themetwo-toggle-key-shadow: hsl(25, 99%, 27%);
+    --themetwo-numeric-key: hsl(45, 7%, 89%);
+    --themetwo-numeric-key-shadow: hsl(35, 11%, 61%);
+    
+    /* Text 
+    
+    --very-dark-grayish-yellow: hsl(60, 10%, 19%);
+    --themetwotext: hsl(0, 0, 100%);
+    
+    /* Theme THREE
+    
+    --themethree-background: hsl(268, 75%, 9%);
+    /* (toggle background, keypad background) 
+    --themethree-body-color: hsl(268, 71%, 12%);
+    
+    
+    /* Keys 
+    --themethree-keys-background: hsl(281, 89%, 26%);
+    --themethree-keys-shadow: hsl(285, 91%, 52%);
+    --themethree-toggle-key: hsl(176, 100%, 44%);
+    --themethree-togglekey-shadow: hsl(177, 92%, 70%);
+    --themethree-numeric-key: hsl(268, 47%, 21%);
+    --themethree-numeric-key-shadow: hsl(290, 70%, 36%);
+    
+    /* Text 
+    
+    --themethree-textone: hsl(52, 100%, 62%);
+    --themethree-text-two: hsl(198, 20%, 13%);
+    --themethree-main-text: hsl(0, 0, 100%);
+    
+    */
+    
+    }
+    
+    body{
+        background-color: var(--body-background);  
+    }
+    
+    main{
+        margin: 0 auto;
+        padding-top: 5rem;
+        max-width: 375px;
+    }
+    
+    button{
+        border-style:none;
+        height:50px;
+        border-radius: 5px;
+        box-shadow: 0px 3.5px var(--grayish-orange-key-shadow);
+    }
+    
+    button:hover{
+        cursor: pointer;
+    }
+    
+    .cal-title{
+        color:white;
+    }
+    
+    /* STYLE FOR THE DISPLAY SECTION OF THE APP */  
+    
+    .calculation{
+        display: flex;
+        flex-direction: column;
+        justify-content:space-around;
+        align-items: flex-end;
+        text-align: center;
+        background-color: var(--display-background);
+        color: white;
+        font-size: 2rem;
+        padding: 10px;
+        margin: 0;
+        border-radius: 5px;
+        height: 90px;
+        word-wrap: break-word;
+        word-break: break-all;
+    }
+    
+    /* UNIVERSAL STYLE FOR ALL THE BUTTON */
+    .buttons{
+        background-color: var(--keypad-background);
+        display: grid;
+        grid-template-columns:repeat(4, 1fr);
+        grid-template-rows: auto;
+        gap: 19px;
+        padding:1.50rem;
+        margin-top: 1rem;
+        border-radius: 5px;
+       
+    }
+    
+    /* STYLING NUMERIC KEYS */
+    .keys{
+        background-color:var(--light-grayish-orange-key);
+        font-size: var(--numeric-font-size);
+        font-weight: var(--weight);
+        color:var(--keys-background)
+    }
+    
+    
+    /* STYLING NON OPERATION KEYS */
+    .non-operation-keys{
+        font-size: 1.50rem;
+        color:white;
+    }
+    
+    .delete-button,.clear-button {
+        background-color: var(--keys-background);
+        font-size: var(--numeric-font-size);
+        text-transform: uppercase;
+        color:white;
+        box-shadow: 0px 3.5px var(--keys-shadow);
+        grid-area: fourth-item-in-row-one;
+    }
+    
+    
+    .equal-button{
+        grid-area: 5/2;
+        background-color: var(--red-key-background-on-toggle);
+        box-shadow: 0px 3.5px var(--dark-red-key-shadow);
+    }
+    
+    .seven-button{
+        grid-area: 1/1;
+    }
+    
+    .eight-button{
+        grid-area: 1/2;
+    }
+    
+    .nine-button{
+        grid-area: 1/3;
+    }
+    
+    .delete-button{
+        grid-area: 1/4;
+    }
+    
+    .fourth-button{
+        grid-area: 2/1;
+    }
+    
+    .fifth-button{
+        grid-area: 2/2;
+    }
+    
+    .six-button{
+        grid-area: 2/3;
+    }
+    
+    .addition-button{
+        grid-area: 2/4;
+    }
+    
+    .one-button{
+        grid-area: 3/1;
+    }
+    
+    .two-button{
+        grid-area: 3/2;
+    }
+    
+    .three-button{
+        grid-area: 3/3;
+    }
+    
+    .substraction-button{
+        grid-area: 3/4;
+    }
+    
+    .decimal-button{
+        grid-area: 4/1;
+    }
+    
+    .zero-button{
+        grid-area: 4/2;
+    }
+    
+    .division-button{
+        grid-area: 4/3;
+    }
+    
+    .multiplication-button{
+        grid-area: 4/4;
+    }
+    
+    .clear-button{
+       grid-row-start:5;
+       grid-row-end: 5;
+       grid-column-start: 1;
+       grid-column-end: 3;
+    }
+    
+    .equal-button{
+        grid-row-start:5;
+        grid-row-end: 5;
+        grid-column-start: 3;
+        grid-column-end: 5;
+     }
+    
+    .attribution{
+        font-size: 20px;
+        text-align: center;
+    }
+    
+    .attribution a {
+        color: hsl(228, 45%, 44%); 
+    }
+    
+    @media only screen and (min-width: 1440px){
+        main{
+            max-width: 480px;
+            padding-top: 5rem;
+        }
+        
+    }
+    
+    
